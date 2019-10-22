@@ -11,29 +11,27 @@ package finalproject;
  */
 public class TicTacToe {
     
-   protected char[][] pieces = new char[3][3];
+   protected char[][] board = new char[3][3];
+   
     public TicTacToe(){
-        //pieces[1][1] = 'O';
-        //pieces[2][2] = 'X';
+        
+        for(int a = 0; a < 3; a++){
+            for(int b = 0; b < 3; b++){
+                board[a][b] = '-';
+            }
+        }
     }
     
     
     public void initializeBoard(){
         
         for(int r = 0; r < 3; r++){
-            System.out.println("\n-------");
-            
+            System.out.println("\n-------------");
+            System.out.print("| ");
             for(int c = 0; c < 3; c++){
-                System.out.print("| ");
-                
-                if(pieces[r][c] == 'X'){
-                    System.out.print('X');
-                }
-                else if(pieces[r][c] == 'O'){
-                    System.out.print('O');
-                }
+                System.out.print(board[r][c] + " | ");
             }
         }
-        System.out.println("\n-------");
+        System.out.println("\n-------------");
     }
 }
