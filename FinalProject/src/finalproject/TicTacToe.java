@@ -10,7 +10,7 @@ package finalproject;
  * @author Quintin Stearns
  */
 public class TicTacToe {
-    
+    private int count;
     public TicTacToe(){
         
     }
@@ -19,12 +19,11 @@ public class TicTacToe {
     public void initializeBoard(){
         
         for(int r = 0; r < 3; r++){
-            System.out.println("\n---------");
-            
+            System.out.print("---------");
             for(int c = 0; c < 3; c++){
                 System.out.print(" | ");
             }
         }
-        System.out.println("\n---------");
+        System.out.println("\n------");
     }
 }
