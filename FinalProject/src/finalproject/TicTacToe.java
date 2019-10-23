@@ -4,19 +4,19 @@
  * and open the template in the editor.
  */
 package finalproject;
-
+import java.util.Scanner;
 /**
  *
  * @author Quintin Stearns
  */
 public class TicTacToe {
-<<<<<<< HEAD
+    Scanner in = new Scanner(System.in);
     
-   protected char[][] board = new char[3][3];
-   
-=======
+    protected char[][] board = new char[3][3];
+    protected int p1Move,
+                    p2Move;
+
     private int count;
->>>>>>> master
     public TicTacToe(){
         
         for(int a = 0; a < 3; a++){
@@ -30,20 +30,23 @@ public class TicTacToe {
     public void initializeBoard(){
         
         for(int r = 0; r < 3; r++){
-<<<<<<< HEAD
             System.out.println("\n-------------");
             System.out.print("| ");
-=======
-            System.out.print("---------");
->>>>>>> master
             for(int c = 0; c < 3; c++){
                 System.out.print(board[r][c] + " | ");
             }
         }
-<<<<<<< HEAD
         System.out.println("\n-------------");
-=======
-        System.out.println("\n------");
->>>>>>> master
+    }
+    
+    
+    public void playerInput(){
+        System.out.println("Player 1, where would you like to place your O?");
+        p1Move = in.nextInt();
+    }
+    
+    
+    private void checkBoard(){
+        
     }
 }
